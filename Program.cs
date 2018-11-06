@@ -19,9 +19,7 @@ namespace Federtest
             //f = new Federsystem(new GeneigteFeder(10, 0, 1000), new Gewicht(1));
             f = new Federsystem(new GeneigteFederTetraeder(550, 0.589), new Gewicht(5));
 
-            //Console.SetWindowSize(274, 72);
-
-            f.Vergleich(@"D:\Studium\Master\HCI\Federtest\Federtest\Daten\daten.csv", new[] { 0.2, 0.1, 0.05, 0.01 }, 3);
+            f.Vergleich(Path.GetFullPath(Path.Combine(Directory.GetCurrentDirectory(), @"..\..\", @"Daten\daten.csv")), new[] { 0.2, 0.1, 0.05, 0.01 }, 3);
 
             Console.WriteLine("Fertig");
             Console.ReadLine();
